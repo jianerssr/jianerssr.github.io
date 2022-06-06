@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/2022/06/05/hello-world/</loc>
+    <loc>https://www.yjianhe.com/2022/06/06/%E5%8D%9A%E5%AE%A2%E6%B5%8B%E8%AF%95/</loc>
     
     <lastmod>2022-06-06</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2022/06/06/%E5%8D%9A%E5%AE%A2%E6%B5%8B%E8%AF%95/</loc>
+    <loc>https://www.yjianhe.com/2022/06/05/hello-world/</loc>
     
     <lastmod>2022-06-06</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/404.html</loc>
+    <loc>https://www.yjianhe.com/404.html</loc>
     
     <lastmod>2022-06-06</lastmod>
     
@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/about/index.html</loc>
+    <loc>https://www.yjianhe.com/about/index.html</loc>
     
     <lastmod>2022-06-06</lastmod>
     
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/index.html</loc>
+    <loc>https://www.yjianhe.com/categories/index.html</loc>
     
     <lastmod>2022-06-06</lastmod>
     
@@ -47,7 +47,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/index.html</loc>
+    <loc>https://www.yjianhe.com/tags/index.html</loc>
     
     <lastmod>2022-06-06</lastmod>
     
@@ -57,7 +57,7 @@
   
 
   <url>
-    <loc>http://example.com/</loc>
+    <loc>https://www.yjianhe.com/</loc>
     <lastmod>2022-06-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -65,7 +65,7 @@
 
   
   <url>
-    <loc>http://example.com/tags/%E6%B5%8B%E8%AF%95/</loc>
+    <loc>https://www.yjianhe.com/tags/%E6%B5%8B%E8%AF%95/</loc>
     <lastmod>2022-06-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -74,7 +74,7 @@
 
   
   <url>
-    <loc>http://example.com/categories/%E6%9D%82%E8%B0%88/</loc>
+    <loc>https://www.yjianhe.com/categories/%E6%9D%82%E8%B0%88/</loc>
     <lastmod>2022-06-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
