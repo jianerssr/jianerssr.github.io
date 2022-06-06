@@ -35,7 +35,7 @@
 <p>如何讲帖子页面排出sitemap，即使sitemap不收录该帖子页面<br>例如：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">title: lorem ipsum</span><br><span class="line"><span class="built_in">date</span>: 2020-01-02</span><br><span class="line">sitemap: <span class="literal">false</span></span><br></pre></td></tr></table></figure>
 
-<p>sitemap网址<br><a href="https://www.yjianhe.com/sitemap.xml">https://www.yjianhe.com/sitemap.xml</a><br><a href="https://www.yjianhe.com/sitemap.txt">https://www.yjianhe.com/sitemap.txt</a><br><a href="https://www.yjianhe.com/baidusitmap.xml">https://www.yjianhe.com/baidusitmap.xml</a></p>
+<p>sitemap网址<br><a href="https://www.yjianhe.com/sitemap.xml">https://www.yjianhe.com/sitemap.xml</a><br><a href="https://www.yjianhe.com/sitemap.txt">https://www.yjianhe.com/sitemap.txt</a><br><a href="https://www.yjianhe.com/baidu_urls.txt">https://www.yjianhe.com/baidu_urls.txt</a><br><a href="https://www.yjianhe.com/baidusitemap.xml">https://www.yjianhe.com/baidusitemap.xml</a></p>
 ]]></content>
       <categories>
         <category>杂谈</category>
