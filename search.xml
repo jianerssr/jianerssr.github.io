@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>博客测试</title>
+    <url>/2022/06/06/%E5%8D%9A%E5%AE%A2%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[<p>我的第一篇文章，用于博客测试。</p>
+<span id="more"></span>
+<p>看更多吧</p>
+<p>如何讲帖子页面排出sitemap，即使sitemap不收录该帖子页面<br>例如：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">title: lorem ipsum</span><br><span class="line"><span class="built_in">date</span>: 2020-01-02</span><br><span class="line">sitemap: <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<p>sitemap网址<br><a href="https://www.yjianhe.com/sitemap.xml">https://www.yjianhe.com/sitemap.xml</a><br><a href="https://www.yjianhe.com/sitemap.txt">https://www.yjianhe.com/sitemap.txt</a><br><a href="https://www.yjianhe.com/baidusitmap.xml">https://www.yjianhe.com/baidusitmap.xml</a></p>
+]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+      <tags>
+        <tag>测试</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2022/06/05/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -18,24 +36,6 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>杂谈</category>
-      </categories>
-      <tags>
-        <tag>测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>博客测试</title>
-    <url>/2022/06/06/%E5%8D%9A%E5%AE%A2%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<p>我的第一篇文章，用于博客测试。</p>
-<span id="more"></span>
-<p>看更多吧</p>
-<p>如何讲帖子页面排出sitemap，即使sitemap不收录该帖子页面<br>例如：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">title: lorem ipsum</span><br><span class="line"><span class="built_in">date</span>: 2020-01-02</span><br><span class="line">sitemap: <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-
-<p>sitemap网址<br><a href="https://www.yjianhe.com/sitemap.xml">https://www.yjianhe.com/sitemap.xml</a><br><a href="https://www.yjianhe.com/sitemap.txt">https://www.yjianhe.com/sitemap.txt</a><br><a href="https://www.yjianhe.com/baidusitmap.xml">https://www.yjianhe.com/baidusitmap.xml</a></p>
 ]]></content>
       <categories>
         <category>杂谈</category>

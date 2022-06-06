@@ -1,3 +1,5 @@
 User-agent: *
 Disallow:
 
+Sitemap: https://www.yjianhe.com/sitemap.xml
+Sitemap: https://www.yjianhe.com/baidusitemap.xml
