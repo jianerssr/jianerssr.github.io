@@ -51,7 +51,7 @@
 </title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5KMPH4BZSE"></script>
-    <script>
+    <script data-pjax>
       if (CONFIG.hostname === location.hostname) {
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -61,7 +61,7 @@
     </script>
 
 
-  <script>
+  <script data-pjax>
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
@@ -239,7 +239,7 @@
       <div class="post-body">
           <p>本网站为jianerssr的个人小屋，是jianerssr基于hexo+next在github上搭建的静态博客，由于本人为初学者，对hexo和next了解的不够全面，因此本网站还没完全搭好，现在仍处于半成品状态，希望以后在学习中不断完善。</p>
 <p>本网站主要用于：<br>一、总结jianerssr的学习知识，梳理jianerssr的学习框架；<br>二、记录jianerssr在学习过程中遇到的问题，分享jianerssr在解决这些问题的过程中所得到的经验；<br>三、归纳jianerssr从网上所学的知识，以备日后可以查阅；<br>四、记录jianerssr的心情，为jianerssr提供一个宣泄窗口。</p>
-<p>如对本网站内容存在疑问，可通过jianerssr的个人邮箱联系jianerssr解决。<br>jianerssr个人邮箱：<a href="mailto:&#x6a;&#105;&#97;&#x6e;&#104;&#101;&#x79;&#64;&#x66;&#x6f;&#x78;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#x6d;">&#x6a;&#105;&#97;&#x6e;&#104;&#101;&#x79;&#64;&#x66;&#x6f;&#x78;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#x6d;</a></p>
+<p>如对本网站内容存在疑问，可通过jianerssr的个人邮箱联系jianerssr解决。<br>jianerssr个人邮箱：<a href="mailto:&#106;&#105;&#97;&#x6e;&#104;&#x65;&#x79;&#x40;&#102;&#x6f;&#120;&#109;&#97;&#105;&#x6c;&#46;&#99;&#x6f;&#x6d;">&#106;&#105;&#97;&#x6e;&#104;&#x65;&#x79;&#x40;&#102;&#x6f;&#120;&#109;&#97;&#105;&#x6c;&#46;&#99;&#x6f;&#x6d;</a></p>
 <h1 id="懒人要什么关于界面，就这样吧，凑合着看！"><a href="#懒人要什么关于界面，就这样吧，凑合着看！" class="headerlink" title="懒人要什么关于界面，就这样吧，凑合着看！"></a><center>懒人要什么关于界面，就这样吧，凑合着看！</center></h1>
       </div>
       
@@ -397,7 +397,7 @@
 
         
 <div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
       <span class="post-meta-item-icon">
         <i class="fa fa-user"></i>
@@ -430,6 +430,7 @@
 
   
   <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
 
 <script src="/js/utils.js"></script>
@@ -441,6 +442,65 @@
 <script src="/js/next-boot.js"></script>
 
 <script src="/js/bookmark.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
 
 
 
@@ -465,10 +525,12 @@
 
 
 
+    <div id="pjax">
   
 
   
 
 
+    </div>
 </body>
 </html>
