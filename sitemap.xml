@@ -11,6 +11,15 @@
   </url>
   
   <url>
+    <loc>https://www.heyjian.top/2023/01/19/%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BE%A7%E8%BE%B9%E6%A0%8F%E4%BB%A5%E5%8F%8A%E6%B7%BB%E5%8A%A0css%E3%80%81js%E3%80%81img%E6%96%87%E4%BB%B6%E7%9A%84%E8%AF%B4%E6%98%8E/</loc>
+    
+    <lastmod>2023-01-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.heyjian.top/about/index.html</loc>
     
     <lastmod>2023-01-20</lastmod>
@@ -41,15 +50,6 @@
     <loc>https://www.heyjian.top/tags/index.html</loc>
     
     <lastmod>2023-01-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.heyjian.top/2023/01/19/%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BE%A7%E8%BE%B9%E6%A0%8F%E4%BB%A5%E5%8F%8A%E6%B7%BB%E5%8A%A0css%E3%80%81js%E3%80%81img%E6%96%87%E4%BB%B6%E7%9A%84%E8%AF%B4%E6%98%8E/</loc>
-    
-    <lastmod>2023-01-19</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -92,7 +92,7 @@
 
   
   <url>
-    <loc>https://www.heyjian.top/tags/hexo/</loc>
+    <loc>https://www.heyjian.top/tags/butterfly/</loc>
     <lastmod>2023-01-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -106,14 +106,14 @@
   </url>
   
   <url>
-    <loc>https://www.heyjian.top/tags/butterfly/</loc>
+    <loc>https://www.heyjian.top/tags/%E8%AF%B4%E6%98%8E/</loc>
     <lastmod>2023-01-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.heyjian.top/tags/%E8%AF%B4%E6%98%8E/</loc>
+    <loc>https://www.heyjian.top/tags/hexo/</loc>
     <lastmod>2023-01-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
