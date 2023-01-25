@@ -8,7 +8,7 @@
       <link href="/2023/01/25/%E5%8D%9A%E5%AE%A2%E9%AD%94%E6%94%B9%E5%86%85%E5%AE%B9%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
       <url>/2023/01/25/%E5%8D%9A%E5%AE%A2%E9%AD%94%E6%94%B9%E5%86%85%E5%AE%B9%EF%BC%88%E4%BA%8C%EF%BC%89/</url>
       
-        <content type="html"><![CDATA[<h1 id="博客底部页脚自定义"><a href="#博客底部页脚自定义" class="headerlink" title="博客底部页脚自定义"></a>博客底部页脚自定义</h1><p>来源：<a href="https://blog.leonus.cn/2022/footer.html">博客底部运行时间</a></p><ol><li><p>打开<code>_config.butterfly.yml</code>文件，更改<code>footer_bg</code>设置。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">footer_bg: transparent</span><br></pre></td></tr></table></figure></li><li><p>在<code>/source/css/custom.css</code>文件中插入。</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*页脚设置*/</span></span><br><span class="line"><span class="selector-id">#footer</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: none <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#footer-wrap</span> &#123;</span><br><span class="line"><span class="attribute">color</span>: <span class="number">#4c4948</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>随后，博客页脚与博客主体融为一体，页脚字体清晰，没有之前那种颜色差带来的割裂感。</p></li><li><p>页脚底部设置网站运行时间。</p><p>打开<code>_config.butterfly.yml</code>文件，更改<code>custom_text</code>设置。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">custom_text: &lt;div class=&quot;footer_custom_text_motto&quot;&gt;弃我去者，昨日之日不可留；乱我心者，今日之日多烦忧&lt;/div&gt;&lt;div id=&quot;runtime&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure><p>打开<code>/source/js/custom.js</code>，插入代码。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//页脚底部运行时间</span></span><br><span class="line"><span class="built_in">setInterval</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// let create_time = Math.round(new Date(&#x27;2023-01-14 22:00:00&#x27;).getTime() / 1000); //在此行修改建站时间</span></span><br><span class="line">    <span class="comment">// 有苹果用户发现safari浏览器不能正常运行，百度了一下发现是格式化的问题，改成下面这种应该就可以了。感谢反馈。</span></span><br><span class="line">    <span class="keyword">let</span> create_time = <span class="title class_">Math</span>.<span class="title function_">round</span>(<span class="keyword">new</span> <span class="title class_">Date</span>(<span class="string">&#x27;2023/01/14 22:00:00&#x27;</span>).<span class="title function_">getTime</span>() / <span class="number">1000</span>); <span class="comment">//在此行修改建站时间</span></span><br><span class="line">    <span class="keyword">let</span> timestamp = <span class="title class_">Math</span>.<span class="title function_">round</span>((<span class="keyword">new</span> <span class="title class_">Date</span>().<span class="title function_">getTime</span>()) / <span class="number">1000</span>);</span><br><span class="line">    <span class="keyword">let</span> second = timestamp - create_time;</span><br><span class="line">    <span class="keyword">let</span> time = <span class="keyword">new</span> <span class="title class_">Array</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">    <span class="keyword">var</span> nol = <span class="keyword">function</span>(<span class="params">h</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> h &gt; <span class="number">9</span> ? h : <span class="string">&#x27;0&#x27;</span> + h;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (second &gt;= <span class="number">24</span> * <span class="number">3600</span>) &#123;</span><br><span class="line">        time[<span class="number">0</span>] = <span class="built_in">parseInt</span>(second / (<span class="number">24</span> * <span class="number">3600</span>));</span><br><span class="line">        second %= <span class="number">24</span> * <span class="number">3600</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (second &gt;= <span class="number">3600</span>) &#123;</span><br><span class="line">        time[<span class="number">1</span>] = <span class="title function_">nol</span>(<span class="built_in">parseInt</span>(second / <span class="number">3600</span>));</span><br><span class="line">        second %= <span class="number">3600</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (second &gt;= <span class="number">60</span>) &#123;</span><br><span class="line">        time[<span class="number">2</span>] = <span class="title function_">nol</span>(<span class="built_in">parseInt</span>(second / <span class="number">60</span>));</span><br><span class="line">        second %= <span class="number">60</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (second &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">        time[<span class="number">3</span>] = <span class="title function_">nol</span>(second);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> currentTimeHtml = <span class="string">&quot;&quot;</span></span><br><span class="line">    currentTimeHtml += <span class="string">&#x27; 本站已安全运行 &#x27;</span> + time[<span class="number">0</span>] + <span class="string">&#x27; 天 &#x27;</span> + time[<span class="number">1</span>] + <span class="string">&#x27; 小时 &#x27;</span> + time[<span class="number">2</span>] + <span class="string">&#x27; 分 &#x27;</span> + time[<span class="number">3</span>] + <span class="string">&#x27; 秒 &#x27;</span>;</span><br><span class="line">    <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;runtime&quot;</span>).<span class="property">innerHTML</span> = currentTimeHtml;</span><br><span class="line">&#125;, <span class="number">1000</span>);</span><br></pre></td></tr></table></figure></li></ol>]]></content>
+        <content type="html"><![CDATA[<h1 id="博客页脚自定义"><a href="#博客页脚自定义" class="headerlink" title="博客页脚自定义"></a>博客页脚自定义</h1><p>来源：<a href="https://blog.leonus.cn/2022/footer.html">博客底部运行时间</a></p><ol><li><p>打开<code>_config.butterfly.yml</code>文件，更改<code>footer_bg</code>设置。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">footer_bg: transparent</span><br></pre></td></tr></table></figure></li><li><p>在<code>/source/css/custom.css</code>文件中插入。</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*页脚设置*/</span></span><br><span class="line"><span class="selector-id">#footer</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: none <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#footer-wrap</span> &#123;</span><br><span class="line"><span class="attribute">color</span>: <span class="number">#4c4948</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>随后，博客页脚与博客主体融为一体，页脚字体清晰，没有之前那种颜色差带来的割裂感。</p></li><li><p>页脚底部设置网站运行时间。</p><p>打开<code>_config.butterfly.yml</code>文件，更改<code>custom_text</code>设置。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">custom_text: &lt;div class=&quot;footer_custom_text_motto&quot;&gt;弃我去者，昨日之日不可留；乱我心者，今日之日多烦忧&lt;/div&gt;&lt;div id=&quot;runtime&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure><p>打开<code>/source/js/custom.js</code>，插入代码。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//页脚底部运行时间</span></span><br><span class="line"><span class="built_in">setInterval</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// let create_time = Math.round(new Date(&#x27;2023-01-14 22:00:00&#x27;).getTime() / 1000); //在此行修改建站时间</span></span><br><span class="line">    <span class="comment">// 有苹果用户发现safari浏览器不能正常运行，百度了一下发现是格式化的问题，改成下面这种应该就可以了。感谢反馈。</span></span><br><span class="line">    <span class="keyword">let</span> create_time = <span class="title class_">Math</span>.<span class="title function_">round</span>(<span class="keyword">new</span> <span class="title class_">Date</span>(<span class="string">&#x27;2023/01/14 22:00:00&#x27;</span>).<span class="title function_">getTime</span>() / <span class="number">1000</span>); <span class="comment">//在此行修改建站时间</span></span><br><span class="line">    <span class="keyword">let</span> timestamp = <span class="title class_">Math</span>.<span class="title function_">round</span>((<span class="keyword">new</span> <span class="title class_">Date</span>().<span class="title function_">getTime</span>()) / <span class="number">1000</span>);</span><br><span class="line">    <span class="keyword">let</span> second = timestamp - create_time;</span><br><span class="line">    <span class="keyword">let</span> time = <span class="keyword">new</span> <span class="title class_">Array</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">    <span class="keyword">var</span> nol = <span class="keyword">function</span>(<span class="params">h</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> h &gt; <span class="number">9</span> ? h : <span class="string">&#x27;0&#x27;</span> + h;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (second &gt;= <span class="number">24</span> * <span class="number">3600</span>) &#123;</span><br><span class="line">        time[<span class="number">0</span>] = <span class="built_in">parseInt</span>(second / (<span class="number">24</span> * <span class="number">3600</span>));</span><br><span class="line">        second %= <span class="number">24</span> * <span class="number">3600</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (second &gt;= <span class="number">3600</span>) &#123;</span><br><span class="line">        time[<span class="number">1</span>] = <span class="title function_">nol</span>(<span class="built_in">parseInt</span>(second / <span class="number">3600</span>));</span><br><span class="line">        second %= <span class="number">3600</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (second &gt;= <span class="number">60</span>) &#123;</span><br><span class="line">        time[<span class="number">2</span>] = <span class="title function_">nol</span>(<span class="built_in">parseInt</span>(second / <span class="number">60</span>));</span><br><span class="line">        second %= <span class="number">60</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (second &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">        time[<span class="number">3</span>] = <span class="title function_">nol</span>(second);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> currentTimeHtml = <span class="string">&quot;&quot;</span></span><br><span class="line">    currentTimeHtml += <span class="string">&#x27; 本站已安全运行 &#x27;</span> + time[<span class="number">0</span>] + <span class="string">&#x27; 天 &#x27;</span> + time[<span class="number">1</span>] + <span class="string">&#x27; 小时 &#x27;</span> + time[<span class="number">2</span>] + <span class="string">&#x27; 分 &#x27;</span> + time[<span class="number">3</span>] + <span class="string">&#x27; 秒 &#x27;</span>;</span><br><span class="line">    <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;runtime&quot;</span>).<span class="property">innerHTML</span> = currentTimeHtml;</span><br><span class="line">&#125;, <span class="number">1000</span>);</span><br></pre></td></tr></table></figure></li></ol>]]></content>
       
       
       <categories>
@@ -20,15 +20,15 @@
       
         <tags>
             
-            <tag> butterfly </tag>
+            <tag> hexo </tag>
             
             <tag> 备忘录 </tag>
             
-            <tag> hexo </tag>
-            
-            <tag> 自定义 </tag>
+            <tag> butterfly </tag>
             
             <tag> 博客魔改 </tag>
+            
+            <tag> 自定义 </tag>
             
         </tags>
       
@@ -53,13 +53,13 @@
       
         <tags>
             
-            <tag> butterfly </tag>
-            
             <tag> hexo </tag>
             
-            <tag> 自定义 </tag>
+            <tag> butterfly </tag>
             
             <tag> 博客魔改 </tag>
+            
+            <tag> 自定义 </tag>
             
         </tags>
       
@@ -84,15 +84,15 @@
       
         <tags>
             
-            <tag> butterfly </tag>
+            <tag> hexo </tag>
             
             <tag> 备忘录 </tag>
             
-            <tag> hexo </tag>
-            
-            <tag> 自定义 </tag>
+            <tag> butterfly </tag>
             
             <tag> 博客魔改 </tag>
+            
+            <tag> 自定义 </tag>
             
         </tags>
       
@@ -117,9 +117,9 @@
       
         <tags>
             
-            <tag> butterfly </tag>
-            
             <tag> 备忘录 </tag>
+            
+            <tag> butterfly </tag>
             
             <tag> 说明 </tag>
             
@@ -183,9 +183,9 @@
       
         <tags>
             
-            <tag> 备忘录 </tag>
-            
             <tag> hexo </tag>
+            
+            <tag> 备忘录 </tag>
             
         </tags>
       
