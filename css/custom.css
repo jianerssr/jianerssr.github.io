@@ -207,7 +207,7 @@ div#archive {
     height:100%;
     content: "\f015";
     box-shadow: 0 0 5px #3366ff;
-    font-family: "Font Awesome 6 Free";
+    font-family: FontAwesome;
     text-align: center;
     color:white;
     line-height:34px;/*如果有溢出或者垂直不居中的现象微调一下这个参数*/
@@ -221,8 +221,6 @@ div#archive {
     position: relative;
     font-size: 24px; /*一定要把字体调大点，否则效果惨不忍睹！*/
 }
-
-
 #page-name::before{
     font-size:18px;
     position: absolute;

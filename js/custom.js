@@ -85,8 +85,6 @@ setInterval(() => {
     document.getElementById("runtime").innerHTML = currentTimeHtml;
 }, 1000);
 
-
-
 //js有一个小问题：就是只要鼠标滚动不论哪里都会响应，即便你滚动的是子元素
 //2022.9.11 已修复，需要jq，请自行引入
 document.getElementById("name-container").setAttribute("style", "display:none");
