@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>如何搭建git服务器</title>
+      <link href="/2023/02/01/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAgit%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+      <url>/2023/02/01/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAgit%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>本文章仅仅只是最基础的git服务器搭建方法，不是基于gitlab、gitea搭建的git                                          服务器。</p><p>前提：默认服务器已装好git。                                                                     </p></blockquote><h1 id="创建git用户并设置密码"><a href="#创建git用户并设置密码" class="headerlink" title="创建git用户并设置密码"></a>创建git用户并设置密码</h1><p>利用<code>git</code>用户来管理<code>git</code>服务器。</p><p><code>root</code>账户下进行下述操作。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">useradd -m git</span><br><span class="line">passwd git</span><br></pre></td></tr></table></figure><h1 id="配置ssh-key"><a href="#配置ssh-key" class="headerlink" title="配置ssh key"></a>配置ssh key</h1><p><code>git</code>账户下进行下述操作。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">su - git</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd /home/git/</span><br><span class="line">mkdir .ssh</span><br><span class="line">chmod 755 .ssh</span><br><span class="line">touch .ssh/authorized_keys</span><br><span class="line">chmod 644 .ssh/authorized_keys</span><br></pre></td></tr></table></figure><p>然后将本地已经创建好的<code>ssh</code>公钥写进<code>authorized_keys</code>文件中，一行一个公钥。</p><h1 id="创建git仓库并初始化"><a href="#创建git仓库并初始化" class="headerlink" title="创建git仓库并初始化"></a>创建git仓库并初始化</h1><p>同<code>git</code>账户下进行。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /home/git/</span><br><span class="line">mkdir gitrepo</span><br><span class="line">cd gitrepo</span><br><span class="line">git init --bare first.git</span><br></pre></td></tr></table></figure><p>以后可用<code>git init --bare</code>指令创建多个空仓库。</p><h1 id="克隆仓库验证是否配置正确"><a href="#克隆仓库验证是否配置正确" class="headerlink" title="克隆仓库验证是否配置正确"></a>克隆仓库验证是否配置正确</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@my ip:/home/git/gitrepo/first.git</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 业余学习 </category>
+          
+          <category> 云服务器 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+            <tag> Ubuntu </tag>
+            
+            <tag> git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>博客魔改内容（二）</title>
       <link href="/2023/01/25/%E5%8D%9A%E5%AE%A2%E9%AD%94%E6%94%B9%E5%86%85%E5%AE%B9%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
       <url>/2023/01/25/%E5%8D%9A%E5%AE%A2%E9%AD%94%E6%94%B9%E5%86%85%E5%AE%B9%EF%BC%88%E4%BA%8C%EF%BC%89/</url>
@@ -12,6 +43,8 @@
       
       
       <categories>
+          
+          <category> 业余学习 </category>
           
           <category> 建站攻略 </category>
           
@@ -26,9 +59,9 @@
             
             <tag> hexo </tag>
             
-            <tag> 博客魔改 </tag>
-            
             <tag> 自定义 </tag>
+            
+            <tag> 博客魔改 </tag>
             
         </tags>
       
@@ -46,6 +79,8 @@
       
       <categories>
           
+          <category> 业余学习 </category>
+          
           <category> 建站攻略 </category>
           
       </categories>
@@ -57,9 +92,9 @@
             
             <tag> hexo </tag>
             
-            <tag> 博客魔改 </tag>
-            
             <tag> 自定义 </tag>
+            
+            <tag> 博客魔改 </tag>
             
         </tags>
       
@@ -77,6 +112,8 @@
       
       <categories>
           
+          <category> 业余学习 </category>
+          
           <category> 建站攻略 </category>
           
       </categories>
@@ -90,9 +127,9 @@
             
             <tag> hexo </tag>
             
-            <tag> 博客魔改 </tag>
-            
             <tag> 自定义 </tag>
+            
+            <tag> 博客魔改 </tag>
             
         </tags>
       
@@ -109,6 +146,8 @@
       
       
       <categories>
+          
+          <category> 业余学习 </category>
           
           <category> 建站攻略 </category>
           
@@ -138,6 +177,8 @@
       
       
       <categories>
+          
+          <category> 专业进阶 </category>
           
           <category> 课程论文 </category>
           
@@ -176,7 +217,9 @@
       
       <categories>
           
-          <category> 建站攻略 </category>
+          <category> 业余学习 </category>
+          
+          <category> 常用指令 </category>
           
       </categories>
       
