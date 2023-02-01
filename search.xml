@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>将hexo部署到服务器上</title>
+      <link href="/2023/02/01/%E5%B0%86hexo%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A/"/>
+      <url>/2023/02/01/%E5%B0%86hexo%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A/</url>
+      
+        <content type="html"><![CDATA[<!-- 上面添加sticky: 1可以把这篇文章置顶。数值越大，置顶的优先级越大 写文章前请记得删除本注释--><!-- 上面添加swiper_index: 1可以把这篇文章置顶滚动播放。数值越大，置顶的优先级越大 写文章前请记得删除本注释-->]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>如何搭建git服务器</title>
       <link href="/2023/02/01/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAgit%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
       <url>/2023/02/01/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAgit%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
@@ -59,9 +72,9 @@
             
             <tag> hexo </tag>
             
-            <tag> 自定义 </tag>
-            
             <tag> 博客魔改 </tag>
+            
+            <tag> 自定义 </tag>
             
         </tags>
       
@@ -92,9 +105,9 @@
             
             <tag> hexo </tag>
             
-            <tag> 自定义 </tag>
-            
             <tag> 博客魔改 </tag>
+            
+            <tag> 自定义 </tag>
             
         </tags>
       
@@ -127,9 +140,9 @@
             
             <tag> hexo </tag>
             
-            <tag> 自定义 </tag>
-            
             <tag> 博客魔改 </tag>
+            
+            <tag> 自定义 </tag>
             
         </tags>
       

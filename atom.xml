@@ -6,7 +6,7 @@
   <link href="https://www.heyjian.top/atom.xml" rel="self"/>
   
   <link href="https://www.heyjian.top/"/>
-  <updated>2023-02-01T14:37:52.093Z</updated>
+  <updated>2023-02-01T14:44:30.937Z</updated>
   <id>https://www.heyjian.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>将hexo部署到服务器上</title>
+    <link href="https://www.heyjian.top/2023/02/01/%E5%B0%86hexo%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A/"/>
+    <id>https://www.heyjian.top/2023/02/01/%E5%B0%86hexo%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A/</id>
+    <published>2023-02-01T14:44:30.000Z</published>
+    <updated>2023-02-01T14:44:30.937Z</updated>
+    
+    <content type="html"><![CDATA[<!-- 上面添加sticky: 1可以把这篇文章置顶。数值越大，置顶的优先级越大 写文章前请记得删除本注释--><!-- 上面添加swiper_index: 1可以把这篇文章置顶滚动播放。数值越大，置顶的优先级越大 写文章前请记得删除本注释-->]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;!-- 上面添加sticky: 1可以把这篇文章置顶。数值越大，置顶的优先级越大 写文章前请记得删除本注释--&gt;
+
+&lt;!-- 上面添加swiper_index: 1可以把这篇文章置顶滚动播放。数值越大，置顶的优先级越大
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>如何搭建git服务器</title>
@@ -72,9 +99,9 @@
     
       <category term="hexo" scheme="https://www.heyjian.top/tags/hexo/"/>
     
-      <category term="自定义" scheme="https://www.heyjian.top/tags/%E8%87%AA%E5%AE%9A%E4%B9%89/"/>
-    
       <category term="博客魔改" scheme="https://www.heyjian.top/tags/%E5%8D%9A%E5%AE%A2%E9%AD%94%E6%94%B9/"/>
+    
+      <category term="自定义" scheme="https://www.heyjian.top/tags/%E8%87%AA%E5%AE%9A%E4%B9%89/"/>
     
   </entry>
   
@@ -103,9 +130,9 @@
     
       <category term="hexo" scheme="https://www.heyjian.top/tags/hexo/"/>
     
-      <category term="自定义" scheme="https://www.heyjian.top/tags/%E8%87%AA%E5%AE%9A%E4%B9%89/"/>
-    
       <category term="博客魔改" scheme="https://www.heyjian.top/tags/%E5%8D%9A%E5%AE%A2%E9%AD%94%E6%94%B9/"/>
+    
+      <category term="自定义" scheme="https://www.heyjian.top/tags/%E8%87%AA%E5%AE%9A%E4%B9%89/"/>
     
   </entry>
   
@@ -136,9 +163,9 @@
     
       <category term="hexo" scheme="https://www.heyjian.top/tags/hexo/"/>
     
-      <category term="自定义" scheme="https://www.heyjian.top/tags/%E8%87%AA%E5%AE%9A%E4%B9%89/"/>
-    
       <category term="博客魔改" scheme="https://www.heyjian.top/tags/%E5%8D%9A%E5%AE%A2%E9%AD%94%E6%94%B9/"/>
+    
+      <category term="自定义" scheme="https://www.heyjian.top/tags/%E8%87%AA%E5%AE%9A%E4%B9%89/"/>
     
   </entry>
   
