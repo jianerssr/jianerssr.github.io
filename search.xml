@@ -8,7 +8,7 @@
       <link href="/2023/02/01/%E5%B0%86hexo%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A/"/>
       <url>/2023/02/01/%E5%B0%86hexo%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A/</url>
       
-        <content type="html"><![CDATA[<blockquote></blockquote><ol><li><p>前提。</p><p>已经搭建好<a href="https://www.heyjian.top/2023/02/01/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAgit%E6%9C%8D%E5%8A%A1%E5%99%A8/"><code>git</code>服务器</a>。</p></li><li><p>创建仓库。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /home/git/gitrepo</span><br><span class="line">git init --bare blog.git</span><br></pre></td></tr></table></figure></li><li><p>配置git-hooks</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd blog.git/hooks</span><br><span class="line">vim post-receive</span><br></pre></td></tr></table></figure><p>在<code>post-receive</code>文件中添加下述内容。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">git --work-tree=/www/wwwroot/myblog --git-dir=/home/git/gitrepo/blog.git checkout -f</span><br></pre></td></tr></table></figure><p>上述代码意思是把提交到<code>git</code>仓库的文件同步到博客目录中，我的博客目录为:<code>/www/wwwroot/myblog</code>。</p><p>为其添加权限并改变博客文件所有者：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chmod +x /home/git/gitrepo/blog.git/hooks/post-receive</span><br><span class="line">chown -R git:git /home/git/gitrepo/blog.git</span><br></pre></td></tr></table></figure></li><li><p>创建博客目录。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir /www/wwwroot/myblog</span><br><span class="line">chown -R git:git /www/wwwroot/myblog</span><br><span class="line">chmod -R 755 /www/wwwroot/myblog</span><br></pre></td></tr></table></figure></li><li><p>配置本地站点文件。</p><p>打开<code>_config.yml</code>文件。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">- type: git</span><br><span class="line">  repo: git@github.com:jianerssr/jianerssr.github.io.git</span><br><span class="line">  branch: main</span><br><span class="line">- type: git #自己服务器网站</span><br><span class="line">  repo: git@myip:/home/git/gitrepo/blog.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><p>over，尽情地<code>hexo &amp;&amp; clean &amp;&amp; hexo g &amp;&amp; hexo d</code>吧。</p></li></ol>]]></content>
+        <content type="html"><![CDATA[<blockquote><p>最近，在阿里云淘了一台2核2G1Mbps的云服务器，有效期一年，就想着折腾一下，先在服务器上建立一个自己的博客，仅对自己开放（国内服务器，懒得备案了）。然后我wordpress和typecho都试了一下，发现都要自己重头开始配置，嫌麻烦，太费时间了，索性就用hexo静态博客了。</p></blockquote><ol><li><p>前提。</p><p>已经搭建好<a href="https://www.heyjian.top/2023/02/01/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAgit%E6%9C%8D%E5%8A%A1%E5%99%A8/"><code>git</code>服务器</a>。</p></li><li><p>创建仓库。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /home/git/gitrepo</span><br><span class="line">git init --bare blog.git</span><br></pre></td></tr></table></figure></li><li><p>配置git-hooks</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd blog.git/hooks</span><br><span class="line">vim post-receive</span><br></pre></td></tr></table></figure><p>在<code>post-receive</code>文件中添加下述内容。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">git --work-tree=/www/wwwroot/myblog --git-dir=/home/git/gitrepo/blog.git checkout -f</span><br></pre></td></tr></table></figure><p>上述代码意思是把提交到<code>git</code>仓库的文件同步到博客目录中，我的博客目录为:<code>/www/wwwroot/myblog</code>。</p><p>为其添加权限并改变博客文件所有者：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chmod +x /home/git/gitrepo/blog.git/hooks/post-receive</span><br><span class="line">chown -R git:git /home/git/gitrepo/blog.git</span><br></pre></td></tr></table></figure></li><li><p>创建博客目录。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir /www/wwwroot/myblog</span><br><span class="line">chown -R git:git /www/wwwroot/myblog</span><br><span class="line">chmod -R 755 /www/wwwroot/myblog</span><br></pre></td></tr></table></figure></li><li><p>配置本地站点文件。</p><p>打开<code>_config.yml</code>文件。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">- type: git</span><br><span class="line">  repo: git@github.com:jianerssr/jianerssr.github.io.git</span><br><span class="line">  branch: main</span><br><span class="line">- type: git #自己服务器网站</span><br><span class="line">  repo: git@myip:/home/git/gitrepo/blog.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><p>over，尽情地<code>hexo &amp;&amp; clean &amp;&amp; hexo g &amp;&amp; hexo d</code>吧。</p></li></ol>]]></content>
       
       
       <categories>
@@ -86,11 +86,11 @@
       
         <tags>
             
-            <tag> hexo </tag>
+            <tag> butterfly </tag>
             
             <tag> 备忘录 </tag>
             
-            <tag> butterfly </tag>
+            <tag> hexo </tag>
             
             <tag> 自定义 </tag>
             
@@ -121,9 +121,9 @@
       
         <tags>
             
-            <tag> hexo </tag>
-            
             <tag> butterfly </tag>
+            
+            <tag> hexo </tag>
             
             <tag> 自定义 </tag>
             
@@ -154,11 +154,11 @@
       
         <tags>
             
-            <tag> hexo </tag>
+            <tag> butterfly </tag>
             
             <tag> 备忘录 </tag>
             
-            <tag> butterfly </tag>
+            <tag> hexo </tag>
             
             <tag> 自定义 </tag>
             
@@ -189,9 +189,9 @@
       
         <tags>
             
-            <tag> 备忘录 </tag>
-            
             <tag> butterfly </tag>
+            
+            <tag> 备忘录 </tag>
             
             <tag> 说明 </tag>
             
@@ -259,9 +259,9 @@
       
         <tags>
             
-            <tag> hexo </tag>
-            
             <tag> 备忘录 </tag>
+            
+            <tag> hexo </tag>
             
         </tags>
       
