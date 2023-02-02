@@ -6,7 +6,7 @@
   <link href="https://www.heyjian.top/atom.xml" rel="self"/>
   
   <link href="https://www.heyjian.top/"/>
-  <updated>2023-02-01T14:44:30.937Z</updated>
+  <updated>2023-02-02T08:46:50.722Z</updated>
   <id>https://www.heyjian.top/</id>
   
   <author>
@@ -21,25 +21,29 @@
     <link href="https://www.heyjian.top/2023/02/01/%E5%B0%86hexo%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A/"/>
     <id>https://www.heyjian.top/2023/02/01/%E5%B0%86hexo%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A/</id>
     <published>2023-02-01T14:44:30.000Z</published>
-    <updated>2023-02-01T14:44:30.937Z</updated>
+    <updated>2023-02-02T08:46:50.722Z</updated>
     
-    <content type="html"><![CDATA[<!-- 上面添加sticky: 1可以把这篇文章置顶。数值越大，置顶的优先级越大 写文章前请记得删除本注释--><!-- 上面添加swiper_index: 1可以把这篇文章置顶滚动播放。数值越大，置顶的优先级越大 写文章前请记得删除本注释-->]]></content>
+    <content type="html"><![CDATA[<blockquote></blockquote><ol><li><p>前提。</p><p>已经搭建好<a href="https://www.heyjian.top/2023/02/01/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAgit%E6%9C%8D%E5%8A%A1%E5%99%A8/"><code>git</code>服务器</a>。</p></li><li><p>创建仓库。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /home/git/gitrepo</span><br><span class="line">git init --bare blog.git</span><br></pre></td></tr></table></figure></li><li><p>配置git-hooks</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd blog.git/hooks</span><br><span class="line">vim post-receive</span><br></pre></td></tr></table></figure><p>在<code>post-receive</code>文件中添加下述内容。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">git --work-tree=/www/wwwroot/myblog --git-dir=/home/git/gitrepo/blog.git checkout -f</span><br></pre></td></tr></table></figure><p>上述代码意思是把提交到<code>git</code>仓库的文件同步到博客目录中，我的博客目录为:<code>/www/wwwroot/myblog</code>。</p><p>为其添加权限并改变博客文件所有者：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chmod +x /home/git/gitrepo/blog.git/hooks/post-receive</span><br><span class="line">chown -R git:git /home/git/gitrepo/blog.git</span><br></pre></td></tr></table></figure></li><li><p>创建博客目录。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir /www/wwwroot/myblog</span><br><span class="line">chown -R git:git /www/wwwroot/myblog</span><br><span class="line">chmod -R 755 /www/wwwroot/myblog</span><br></pre></td></tr></table></figure></li><li><p>配置本地站点文件。</p><p>打开<code>_config.yml</code>文件。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">- type: git</span><br><span class="line">  repo: git@github.com:jianerssr/jianerssr.github.io.git</span><br><span class="line">  branch: main</span><br><span class="line">- type: git #自己服务器网站</span><br><span class="line">  repo: git@myip:/home/git/gitrepo/blog.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><p>over，尽情地<code>hexo &amp;&amp; clean &amp;&amp; hexo g &amp;&amp; hexo d</code>吧。</p></li></ol>]]></content>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;!-- 上面添加sticky: 1可以把这篇文章置顶。数值越大，置顶的优先级越大 写文章前请记得删除本注释--&gt;
-
-&lt;!-- 上面添加swiper_index: 1可以把这篇文章置顶滚动播放。数值越大，置顶的优先级越大
-        
-      
+      如题，简要介绍将hexo部署到服务器的方法
     
     </summary>
     
     
+      <category term="业余学习" scheme="https://www.heyjian.top/categories/%E4%B8%9A%E4%BD%99%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="云服务器" scheme="https://www.heyjian.top/categories/%E4%B8%9A%E4%BD%99%E5%AD%A6%E4%B9%A0/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    
+      <category term="hexo" scheme="https://www.heyjian.top/tags/hexo/"/>
+    
+      <category term="linux" scheme="https://www.heyjian.top/tags/linux/"/>
+    
+      <category term="Ubuntu" scheme="https://www.heyjian.top/tags/Ubuntu/"/>
+    
+      <category term="git" scheme="https://www.heyjian.top/tags/git/"/>
     
   </entry>
   
@@ -93,11 +97,11 @@
       <category term="建站攻略" scheme="https://www.heyjian.top/categories/%E4%B8%9A%E4%BD%99%E5%AD%A6%E4%B9%A0/%E5%BB%BA%E7%AB%99%E6%94%BB%E7%95%A5/"/>
     
     
-      <category term="butterfly" scheme="https://www.heyjian.top/tags/butterfly/"/>
+      <category term="hexo" scheme="https://www.heyjian.top/tags/hexo/"/>
     
       <category term="备忘录" scheme="https://www.heyjian.top/tags/%E5%A4%87%E5%BF%98%E5%BD%95/"/>
     
-      <category term="hexo" scheme="https://www.heyjian.top/tags/hexo/"/>
+      <category term="butterfly" scheme="https://www.heyjian.top/tags/butterfly/"/>
     
       <category term="自定义" scheme="https://www.heyjian.top/tags/%E8%87%AA%E5%AE%9A%E4%B9%89/"/>
     
@@ -126,9 +130,9 @@
       <category term="建站攻略" scheme="https://www.heyjian.top/categories/%E4%B8%9A%E4%BD%99%E5%AD%A6%E4%B9%A0/%E5%BB%BA%E7%AB%99%E6%94%BB%E7%95%A5/"/>
     
     
-      <category term="butterfly" scheme="https://www.heyjian.top/tags/butterfly/"/>
-    
       <category term="hexo" scheme="https://www.heyjian.top/tags/hexo/"/>
+    
+      <category term="butterfly" scheme="https://www.heyjian.top/tags/butterfly/"/>
     
       <category term="自定义" scheme="https://www.heyjian.top/tags/%E8%87%AA%E5%AE%9A%E4%B9%89/"/>
     
@@ -157,11 +161,11 @@
       <category term="建站攻略" scheme="https://www.heyjian.top/categories/%E4%B8%9A%E4%BD%99%E5%AD%A6%E4%B9%A0/%E5%BB%BA%E7%AB%99%E6%94%BB%E7%95%A5/"/>
     
     
-      <category term="butterfly" scheme="https://www.heyjian.top/tags/butterfly/"/>
+      <category term="hexo" scheme="https://www.heyjian.top/tags/hexo/"/>
     
       <category term="备忘录" scheme="https://www.heyjian.top/tags/%E5%A4%87%E5%BF%98%E5%BD%95/"/>
     
-      <category term="hexo" scheme="https://www.heyjian.top/tags/hexo/"/>
+      <category term="butterfly" scheme="https://www.heyjian.top/tags/butterfly/"/>
     
       <category term="自定义" scheme="https://www.heyjian.top/tags/%E8%87%AA%E5%AE%9A%E4%B9%89/"/>
     
@@ -190,9 +194,9 @@
       <category term="建站攻略" scheme="https://www.heyjian.top/categories/%E4%B8%9A%E4%BD%99%E5%AD%A6%E4%B9%A0/%E5%BB%BA%E7%AB%99%E6%94%BB%E7%95%A5/"/>
     
     
-      <category term="butterfly" scheme="https://www.heyjian.top/tags/butterfly/"/>
-    
       <category term="备忘录" scheme="https://www.heyjian.top/tags/%E5%A4%87%E5%BF%98%E5%BD%95/"/>
+    
+      <category term="butterfly" scheme="https://www.heyjian.top/tags/butterfly/"/>
     
       <category term="说明" scheme="https://www.heyjian.top/tags/%E8%AF%B4%E6%98%8E/"/>
     
@@ -256,9 +260,9 @@
       <category term="常用指令" scheme="https://www.heyjian.top/categories/%E4%B8%9A%E4%BD%99%E5%AD%A6%E4%B9%A0/%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/"/>
     
     
-      <category term="备忘录" scheme="https://www.heyjian.top/tags/%E5%A4%87%E5%BF%98%E5%BD%95/"/>
-    
       <category term="hexo" scheme="https://www.heyjian.top/tags/hexo/"/>
+    
+      <category term="备忘录" scheme="https://www.heyjian.top/tags/%E5%A4%87%E5%BF%98%E5%BD%95/"/>
     
   </entry>
   
