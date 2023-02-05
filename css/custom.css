@@ -90,21 +90,21 @@
 :root {
   --trans-light: rgba(255, 255, 255, 0.88);
   --trans-dark: rgba(25, 25, 25, 0.88);
-  --border-style: 1px solid rgb(169, 169, 169);
+  --border-style: 2px solid #ffffff;
   --backdrop-filter: blur(5px) saturate(150%);
 }
 /* 首页文章卡片 */
 #recent-posts > .recent-post-item {
   background: var(--trans-light);
   backdrop-filter: var(--backdrop-filter);
-  border-radius: 25px;
+  border-radius: 15px;
   border: var(--border-style);
 }
 /* 首页侧栏卡片 */
 #aside-content .card-widget {
   background: var(--trans-light);
   backdrop-filter: var(--backdrop-filter);
-  border-radius: 18px;
+  border-radius: 15px;
   border: var(--border-style);
 }
 /* 文章页、归档页、普通页面 */
@@ -114,7 +114,7 @@ div#archive {
   background: var(--trans-light);
   backdrop-filter: var(--backdrop-filter);
   border: var(--border-style);
-  border-radius: 20px;
+  border-radius: 15px;
 }
 /* 导航栏 */
 #page-header.nav-fixed #nav {
@@ -267,3 +267,397 @@ div#archive {
     padding: 0 20px;
 }
 
+/*关于界面*/
+#gitcalendar_name{
+  text-align:center;
+  font-size:19px;
+  font-weight:bold;
+}
+#page:has(#about-page) {
+  border: 0;
+  box-shadow: none !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+#page:has(#about-page) .page-title {
+  display: none;
+}
+#about-page .author-box {
+  position: relative;
+}
+#about-page .author-box .author-img {
+  margin: auto;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 180px;
+  height: 180px;
+}
+#about-page .author-box .author-img img {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 180px;
+  height: 180px;
+}
+#about-page .author-box .image-dot {
+  width: 45px;
+  height: 45px;
+  background: #6bdf8f;
+  position: absolute;
+  border-radius: 50%;
+  border: 6px solid #ffffff;
+  top: 50%;
+  left: 50%;
+  transform: translate(35px, 45px);
+}
+p.p.large,p.p.small{
+  margin: 0;
+  padding: 0;
+}
+p.p.large{
+  font-size: 2.5rem;
+  line-height: 1.4;
+}
+p.p.center{
+  display: block;
+  text-align: center;
+}
+p.p.small{
+  font-size: 17px;
+}
+.author-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 1rem;
+}
+#about-page .myInfoAndSayHello {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  background: linear-gradient(120deg, #5b27ff 0, #00d4ff 100%);
+  background-size: 200%;
+  animation: gradient 15s ease infinite;
+  width: 59%;
+}
+.author-content-item {
+  width: 49%;
+  border-radius: 24px;
+  background: #fff;
+  border: 1px solid #e3e8f7;
+  box-shadow: 0 8px 16px -4px #2c2d300c;
+  position: relative;
+  padding: 1rem 2rem;
+  overflow: hidden;
+}
+#about-page .myInfoAndSayHello .title1 {
+  opacity: 0.8;
+  line-height: 1.3;
+}
+#about-page .myInfoAndSayHello .title2 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0.5rem 0;
+}
+.inline-word {
+  word-break: keep-all;
+  white-space: nowrap;
+}
+.author-content-item .author-content-item-tips {
+  opacity: .8;
+  font-size: .6rem;
+  margin-bottom: .5rem;
+}
+.author-content-item.aboutsiteTips {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 39%;
+}
+.aboutsiteTips h2 {
+  margin-right: auto;
+  font-size: 36px;
+  font-family: Helvetica;
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+  color: #4c4948;
+  margin-top: 0;
+}
+.aboutsiteTips .mask {
+  height: 36px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 4px;
+}
+.aboutsiteTips .mask span {
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  top: 36px;
+  padding-bottom: var(--offset);
+  background-size: 100% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+}
+.aboutsiteTips .mask span[data-show] {
+  transform: translateY(-100%);
+  transition: 0.5s transform ease-in-out;
+}
+.aboutsiteTips .mask span[data-up] {
+  transform: translateY(-200%);
+  transition: 0.5s transform ease-in-out;
+}
+.aboutsiteTips .mask span:nth-child(1) {
+  background-image: linear-gradient(45deg, #ff33cc 50%, #ff3366);
+}
+.aboutsiteTips .mask span:nth-child(2) {
+  background-image: linear-gradient(45deg, #18e198 50%, #0ec15d);
+}
+.aboutsiteTips .mask span:nth-child(3) {
+  background-image: linear-gradient(45deg, #8a7cfb 50%, #633e9c);
+}
+.aboutsiteTips .mask span:nth-child(4) {
+  background-image: linear-gradient(45deg, #fa7671 50%, #f45f7f);
+}
+.aboutsiteTips .mask span:nth-child(5) {
+  background-image: linear-gradient(45deg, #33ccff 50%, #3366ff);
+}
+.author-content-item-group.column.mapAndInfo {
+  width: 59%;
+}
+.author-content-item-group.column {
+  display: flex;
+  flex-direction: column;
+  width: 49%;
+  justify-content: space-between;
+}
+.author-content-item.single {
+  width: 100%;
+}
+.author-content-item.map {
+  background: url(/img/2023020401.jpg) no-repeat center;
+  min-height: 200px;
+  max-height: 400px;
+  position: relative;
+  overflow: hidden;
+  height: 60%;
+  background-size: 100%;
+  transition: 1s ease-in-out;
+}
+[data-theme="dark"] .author-content-item.map {
+  background: url(/img/2023020401.jpg) no-repeat center;
+  background-size: 100%;
+}
+.author-content-item.map .map-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.6);
+  padding: .5rem 2rem;
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: 1s ease-in-out;
+  font-size: 20px;
+}
+.author-content-item.selfInfo {
+  display: flex;
+  min-height: 100px;
+  max-height: 400px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  height: -webkit-fill-available;
+  height: 40%;
+  margin-bottom: 0.5rem;
+}
+.author-content-item.selfInfo div {
+  display: flex;
+  flex-direction: column;
+  margin: .5rem 2rem .5rem 0;
+}
+.author-content-item.selfInfo .selfInfo-title {
+  opacity: .8;
+  font-size: .6rem;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.author-content-item.selfInfo .selfInfo-content {
+  font-weight: 700;
+  font-size: 22.5px;
+  line-height: 1;
+}
+.author-content-item.map:hover {
+  background-size: 120%;
+  transition: 4s ease-in-out;
+  background-position-x: 0;
+  background-position-y: 36%;
+}
+.author-content-item.map:hover .map-title {
+  bottom: -100%;
+}
+.author-content-item.personalities {
+  position: relative;
+  width: 39%;
+  min-height:380px;
+
+}
+.author-content-item .author-content-item-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+}
+.author-content-item.personalities .title2 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.post-tips {
+  color: #999999;
+  font-size: 14px;
+  position: absolute;
+  bottom: 1rem;
+  left: 2rem;
+}
+/*方框里面一个蓝底白色的勾*/
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+.checkbox.blue input[type=checkbox]:checked {
+  background: #2196f3;
+}
+.checkbox input[type=checkbox]:checked {
+  background: #2196f3;
+}
+.checkbox p {
+  display: inline-block;
+  margin-top: 2px!important;
+  margin-bottom: 0!important;
+}
+.checkbox.blue input {
+  border-color: #2196f3;
+}
+.checkbox input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  height: 16px;
+  width: 16px;
+  transition: all .15s ease-out 0s;
+  cursor: pointer;
+  display: inline-block;
+  outline: 0;
+  border-radius: 2px;
+  flex-shrink: 0;
+  margin-right: 8px;
+  border: 2px solid #2196f3;
+  pointer-events: none;
+}
+.checkbox input[type=checkbox]:checked:before {
+  left: 0;
+  top: 7px;
+  width: 6px;
+  height: 2px;
+}
+.checkbox input[type=checkbox]:after, .checkbox input[type=checkbox]:before {
+  position: absolute;
+  content: "";
+  background: #fff;
+}
+.checkbox input[type=checkbox]:before {
+  left: 1px;
+  top: 5px;
+  width: 0;
+  height: 2px;
+  transition: all .2s ease-in;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+.checkbox input[type=checkbox]:checked:after {
+  right: 3px;
+  bottom: 1px;
+  width: 2px;
+  height: 10px;
+}
+.checkbox input[type=checkbox]:after, .checkbox input[type=checkbox]:before {
+  position: absolute;
+  content: "";
+  background: #fff;
+}
+.checkbox input[type=checkbox]:after {
+  right: 7px;
+  bottom: 3px;
+  width: 2px;
+  height: 0;
+  transition: all .2s ease-out;
+  transform: rotate(40deg);
+  -webkit-transform: rotate(40deg);
+  -moz-transform: rotate(40deg);
+  -ms-transform: rotate(40deg);
+  -o-transform: rotate(40deg);
+  transition-delay: .25s;
+}
+/*方框里面一个红底白色的差*/
+.checkbox.red input[type=checkbox]:checked {
+  background: #fe5f58;
+}
+.checkbox.red input {
+  border-color: #fe5f58;
+}
+.checkbox.times input[type=checkbox]:checked:before {
+  left: 1px;
+  top: 5px;
+  width: 10px;
+  height: 2px;
+}
+.checkbox.times input[type=checkbox]:before {
+  transform: rotate(45deg);
+  left: 3px;
+  top: 1px;
+  width: 0;
+  height: 2px;
+}
+.checkbox.times input[type=checkbox]:checked:after {
+  right: 1px;
+  top: 5px;
+  width: 10px;
+  height: 2px;
+}
+.checkbox.times input[type=checkbox]:after {
+  transform: rotate(135deg);
+  right: 3px;
+  top: 1px;
+  width: 0;
+  height: 2px;
+}
+@media screen and (max-width: 768px){
+  .author-content-item {
+      width: 100%!important;
+      margin-top: 1rem;
+      padding: 1rem;
+    }
+  .author-content {
+      margin-top: 0;}
+  .author-content-item-group.column {
+      width: 100%!important;}
+  #selfInfo-content-year {
+      width: 90px;}
+  .author-content-item.selfInfo {
+      height: 95%;}
+  .author-content-item.map {
+      margin-bottom: 0;}
+  .post-tips {
+      left: auto;}
+}
