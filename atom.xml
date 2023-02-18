@@ -157,15 +157,15 @@
       <category term="云服务器" scheme="https://www.heyjian.cn/categories/%E4%B8%9A%E4%BD%99%E5%AD%A6%E4%B9%A0/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
     
+      <category term="hexo" scheme="https://www.heyjian.cn/tags/hexo/"/>
+    
       <category term="linux" scheme="https://www.heyjian.cn/tags/linux/"/>
     
       <category term="Ubuntu" scheme="https://www.heyjian.cn/tags/Ubuntu/"/>
     
-      <category term="hexo" scheme="https://www.heyjian.cn/tags/hexo/"/>
+      <category term="git" scheme="https://www.heyjian.cn/tags/git/"/>
     
       <category term="docker" scheme="https://www.heyjian.cn/tags/docker/"/>
-    
-      <category term="git" scheme="https://www.heyjian.cn/tags/git/"/>
     
   </entry>
   
@@ -219,11 +219,11 @@
       <category term="建站攻略" scheme="https://www.heyjian.cn/categories/%E4%B8%9A%E4%BD%99%E5%AD%A6%E4%B9%A0/%E5%BB%BA%E7%AB%99%E6%94%BB%E7%95%A5/"/>
     
     
-      <category term="butterfly" scheme="https://www.heyjian.cn/tags/butterfly/"/>
+      <category term="hexo" scheme="https://www.heyjian.cn/tags/hexo/"/>
     
       <category term="备忘录" scheme="https://www.heyjian.cn/tags/%E5%A4%87%E5%BF%98%E5%BD%95/"/>
     
-      <category term="hexo" scheme="https://www.heyjian.cn/tags/hexo/"/>
+      <category term="butterfly" scheme="https://www.heyjian.cn/tags/butterfly/"/>
     
       <category term="自定义" scheme="https://www.heyjian.cn/tags/%E8%87%AA%E5%AE%9A%E4%B9%89/"/>
     
@@ -252,9 +252,9 @@
       <category term="建站攻略" scheme="https://www.heyjian.cn/categories/%E4%B8%9A%E4%BD%99%E5%AD%A6%E4%B9%A0/%E5%BB%BA%E7%AB%99%E6%94%BB%E7%95%A5/"/>
     
     
-      <category term="butterfly" scheme="https://www.heyjian.cn/tags/butterfly/"/>
-    
       <category term="hexo" scheme="https://www.heyjian.cn/tags/hexo/"/>
+    
+      <category term="butterfly" scheme="https://www.heyjian.cn/tags/butterfly/"/>
     
       <category term="自定义" scheme="https://www.heyjian.cn/tags/%E8%87%AA%E5%AE%9A%E4%B9%89/"/>
     
@@ -283,11 +283,11 @@
       <category term="建站攻略" scheme="https://www.heyjian.cn/categories/%E4%B8%9A%E4%BD%99%E5%AD%A6%E4%B9%A0/%E5%BB%BA%E7%AB%99%E6%94%BB%E7%95%A5/"/>
     
     
-      <category term="butterfly" scheme="https://www.heyjian.cn/tags/butterfly/"/>
+      <category term="hexo" scheme="https://www.heyjian.cn/tags/hexo/"/>
     
       <category term="备忘录" scheme="https://www.heyjian.cn/tags/%E5%A4%87%E5%BF%98%E5%BD%95/"/>
     
-      <category term="hexo" scheme="https://www.heyjian.cn/tags/hexo/"/>
+      <category term="butterfly" scheme="https://www.heyjian.cn/tags/butterfly/"/>
     
       <category term="自定义" scheme="https://www.heyjian.cn/tags/%E8%87%AA%E5%AE%9A%E4%B9%89/"/>
     
@@ -316,9 +316,9 @@
       <category term="建站攻略" scheme="https://www.heyjian.cn/categories/%E4%B8%9A%E4%BD%99%E5%AD%A6%E4%B9%A0/%E5%BB%BA%E7%AB%99%E6%94%BB%E7%95%A5/"/>
     
     
-      <category term="butterfly" scheme="https://www.heyjian.cn/tags/butterfly/"/>
-    
       <category term="备忘录" scheme="https://www.heyjian.cn/tags/%E5%A4%87%E5%BF%98%E5%BD%95/"/>
+    
+      <category term="butterfly" scheme="https://www.heyjian.cn/tags/butterfly/"/>
     
       <category term="说明" scheme="https://www.heyjian.cn/tags/%E8%AF%B4%E6%98%8E/"/>
     
@@ -366,7 +366,7 @@
     <link href="https://www.heyjian.cn/2023/01/14/hexo%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4%E5%8F%8A%E8%AF%B4%E6%98%8E/"/>
     <id>https://www.heyjian.cn/2023/01/14/hexo%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4%E5%8F%8A%E8%AF%B4%E6%98%8E/</id>
     <published>2023-01-14T14:04:43.000Z</published>
-    <updated>2023-02-01T14:39:54.646Z</updated>
+    <updated>2023-02-18T06:10:21.857Z</updated>
     
     <content type="html"><![CDATA[<h1 id="1-创建新文章"><a href="#1-创建新文章" class="headerlink" title="1. 创建新文章"></a>1. 创建新文章</h1><p><code>hexo new &quot;title&quot;</code><br><code>hexo n &quot;title&quot;</code><br><code>hexo new post &quot;title&quot;</code></p><h1 id="2-创建新页面"><a href="#2-创建新页面" class="headerlink" title="2. 创建新页面"></a>2. 创建新页面</h1><p><code>hexo new page &quot;title&quot;</code></p><h1 id="3-清除缓存"><a href="#3-清除缓存" class="headerlink" title="3. 清除缓存"></a>3. 清除缓存</h1><p><code>hexo clean</code>执行此指令后清除缓存，会删除站点根目录下的<code>public</code>文件夹。</p><h1 id="4-生成静态网页"><a href="#4-生成静态网页" class="headerlink" title="4. 生成静态网页"></a>4. 生成静态网页</h1><p><code>hexo g</code> <code>hexo generate</code>执行指令后会在站点根目录下生成<code>public</code>文件夹，hexo会将<code>source</code>文件夹里的.md文件编译为.html文件，存放在<code>public</code>文件夹里。</p><h1 id="5-本地启动服务"><a href="#5-本地启动服务" class="headerlink" title="5. 本地启动服务"></a>5. 本地启动服务</h1><p><code>hexo s</code> <code>hexo server</code>除站点及主题配置文件外，hexo会启动服务预览并自动更新，无需重启服务器，直接网页功能即可生效。默认地址<a href="http://localhost:4000/">http://localhost:4000/</a><br><code>hexo server -s</code>以静态模式启动。</p><h1 id="6-部署服务器"><a href="#6-部署服务器" class="headerlink" title="6. 部署服务器"></a>6. 部署服务器</h1><p><code>hexo d</code> <code>hexo deploy</code>将本地数据部署到github。</p><h1 id="7-amp-amp-的使用"><a href="#7-amp-amp-的使用" class="headerlink" title="7. &amp;&amp;的使用"></a>7. &amp;&amp;的使用</h1><p><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s --debug</code> hexo将会依次执行<code>hexo clean``hexo g``hexo s --debug</code>指令，可以随意组合，只要hexo执行后不报错。</p><h1 id="8-本地站点根目录文件夹说明"><a href="#8-本地站点根目录文件夹说明" class="headerlink" title="8. 本地站点根目录文件夹说明"></a>8. 本地站点根目录文件夹说明</h1><p><code>_config.yml</code>网站的配置信息，可以在此配置大部分的参数。<br><code>package.json</code>应用程序信息，以及需要安装的模块信息。<br><code>scaffolds</code>模板文件夹，新建文章时，hexo会根据<code>scaffolds</code>中的模板文件夹新建文件。例如，如果修改<code>scaffold/post.md</code>中的<code>Front-matter</code>内容，那么每次新建一篇文章时都会包含这个修改。<br><code>source</code>资源文件夹，存放用户资源的地方，如markdown文章，当执行<code>hexo g</code>指令后，除 <code>_posts</code>文件夹之外，开头命名为<code> _</code>(下划线)的文件及文件夹和隐藏的文件将会被忽略。Markdown和Html文件会被解析并放到<code> public</code>文件夹，而其他文件会被拷贝过去。<br><code>themes</code>主题文件夹，Hexo会根据主题来生成静态页面。<br><code>_config.[theme].yml</code>主题配置文件，为用户自己创建。以butterfly主题的<code>_config.butterfly.yml</code>为例，当用户将主题目录（<code>/themes/butterfly</code>）的<code>_config.yml</code>内容复制到<code>_config.butterfly.yml</code>后(注意:复制的是主题的<code>_config.yml</code>，而不是hexo根目录的<code>_config.yml</code>，且不用删除hexo根目录的<code>_config.yml</code>)，以后只需要在<code>_config.butterfly.yml</code>进行配置就行，如果使用了<code>_config.butterfly.yml</code>，配置主题的<code>_config.yml</code>将不会有效果。这将不用担心如果更新主题需要重新配置该主题文件。</p>]]></content>
     
@@ -382,9 +382,9 @@
       <category term="常用指令" scheme="https://www.heyjian.cn/categories/%E4%B8%9A%E4%BD%99%E5%AD%A6%E4%B9%A0/%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/"/>
     
     
-      <category term="备忘录" scheme="https://www.heyjian.cn/tags/%E5%A4%87%E5%BF%98%E5%BD%95/"/>
-    
       <category term="hexo" scheme="https://www.heyjian.cn/tags/hexo/"/>
+    
+      <category term="备忘录" scheme="https://www.heyjian.cn/tags/%E5%A4%87%E5%BF%98%E5%BD%95/"/>
     
   </entry>
   
