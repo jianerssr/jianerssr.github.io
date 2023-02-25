@@ -1,6 +1,6 @@
 /*加载动画*/
 .loading-img {
-  background: url(https://imag.heyjian.top/1.jpg) no-repeat center center;
+  background: url(https://img.heyjian.cn/1.jpg) no-repeat center center;
   background-size: cover;
 }
 
@@ -440,7 +440,7 @@ p.p.small{
   width: 100%;
 }
 .author-content-item.map {
-  background: url(/img/2023020401.jpg) no-repeat center;
+  background: url(https://img.heyjian.cn/2023020401.jpg) no-repeat center;
   min-height: 200px;
   max-height: 400px;
   position: relative;
@@ -450,7 +450,7 @@ p.p.small{
   transition: 1s ease-in-out;
 }
 [data-theme="dark"] .author-content-item.map {
-  background: url(/img/2023020401.jpg) no-repeat center;
+  background: url(https://img.heyjian.cn/2023020401.jpg) no-repeat center;
   background-size: 100%;
 }
 .author-content-item.map .map-title {
