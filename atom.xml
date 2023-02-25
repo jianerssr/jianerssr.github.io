@@ -157,11 +157,11 @@
       <category term="云服务器" scheme="https://www.heyjian.cn/categories/%E4%B8%9A%E4%BD%99%E5%AD%A6%E4%B9%A0/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
     
+      <category term="hexo" scheme="https://www.heyjian.cn/tags/hexo/"/>
+    
       <category term="linux" scheme="https://www.heyjian.cn/tags/linux/"/>
     
       <category term="Ubuntu" scheme="https://www.heyjian.cn/tags/Ubuntu/"/>
-    
-      <category term="hexo" scheme="https://www.heyjian.cn/tags/hexo/"/>
     
       <category term="docker" scheme="https://www.heyjian.cn/tags/docker/"/>
     
