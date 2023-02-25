@@ -107,19 +107,3 @@ function scrollToTop(){
 }
 //修复没有弄右键菜单的童鞋无法回顶部的问题
 document.getElementById("page-name").innerText = document.title.split(" | jianerssr的个人小屋")[0];
-
-//关于界面吃喝玩乐
-setInterval(function () {
-    const show = document.querySelector('span[data-show]')
-    const next = show.nextElementSibling || document.querySelector('.first-tips')
-    const up = document.querySelector('span[data-up]')
-
-    if (up) {
-      up.removeAttribute('data-up')
-    }
-
-    show.removeAttribute('data-show')
-    show.setAttribute('data-up', '')
-
-    next.setAttribute('data-show', '')
-  }, 2000)

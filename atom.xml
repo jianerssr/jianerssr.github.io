@@ -163,9 +163,9 @@
     
       <category term="Ubuntu" scheme="https://www.heyjian.cn/tags/Ubuntu/"/>
     
-      <category term="docker" scheme="https://www.heyjian.cn/tags/docker/"/>
-    
       <category term="git" scheme="https://www.heyjian.cn/tags/git/"/>
+    
+      <category term="docker" scheme="https://www.heyjian.cn/tags/docker/"/>
     
   </entry>
   
