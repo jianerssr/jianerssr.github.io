@@ -57,9 +57,9 @@
             
             <tag> Ubuntu </tag>
             
-            <tag> docker </tag>
-            
             <tag> nginx </tag>
+            
+            <tag> docker </tag>
             
         </tags>
       
@@ -156,9 +156,9 @@
             
             <tag> Ubuntu </tag>
             
-            <tag> git </tag>
-            
             <tag> docker </tag>
+            
+            <tag> git </tag>
             
         </tags>
       
